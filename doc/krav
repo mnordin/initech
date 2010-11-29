@@ -1,15 +1,19 @@
-Admin ska ej skriva kod/enkel drift
-Excel Export
-Admin: Skapa enkäter, som har x antal frågor
-Frågetyper:
--Lång text, kort text
--checkbox, dropdown, radiobutton
--"skala"(kolla google form), "Grid"(kolla google form)
-Admin: skapa mottagarlistor med mottagare, mottagare har adresser 
-Resultat på enkäter sparas
-Enkla utskick och summeringar
-Flexibla summeringsmöjligheter(men enkelt)
-Besvara enkät via webbinterface
-Ett adminkonto
-Gränssnittet ska vara enkelt att använda
-kunna skicka ut och sen dra ut rapporter
+Funktionella:  
+	Excel Export 
+	Admin: Skapa enkäter, som har x antal frågor
+	Frågetyper:
+		-Lång text, kort text
+		-checkbox, dropdown, radiobutton
+		-"skala"(kolla google form), "Grid"(kolla google form) 
+	Admin: skapa mottagarlistor med mottagare, mottagare har adresser
+   	Enkla utskick och summeringar
+	Flexibla summeringsmöjligheter(men enkelt)
+	Besvara enkät via webbinterface
+	kunna skicka ut och sen dra ut rapporter
+	Resultat på enkäter sparas
+	
+	
+Icke funktionell:
+	Admin ska ej skriva kod/enkel drift
+	Ett adminkonto
+	Gränssnittet ska vara enkelt att använda
