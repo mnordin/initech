@@ -6,12 +6,13 @@ Funktionella:
 		-checkbox, dropdown, radiobutton
 		-"skala"(kolla google form), "Grid"(kolla google form) 
 	Admin: skapa mottagarlistor med mottagare, mottagare har adresser
-   	Enkla utskick och summeringar
+   	Enkla utskick och summeringar. Möjlighet att inte ta med vissa frågor(med svar) i en rapport
 	Flexibla summeringsmöjligheter(men enkelt)
 	Besvara enkät via webbinterface
 	kunna skicka ut och sen dra ut rapporter
 	Resultat på enkäter sparas
-	
+   	
+
 	
 Icke funktionell:
 	Admin ska ej skriva kod/enkel drift
