@@ -1,0 +1,36 @@
+Admin skapar ny utvärdering
+
+
+Jag klickar på länken Skapa utvärdering
+Jag kommer till en ny sida
+Jag sätter rubrik på utvärderingen
+Jag väljer vilken mall av utvärdering det är via en rullista
+Jag hittar inte mallen jag vill använda i rullistan utan jag får lägga till varje fråga manuellt
+
+
+
+Jag klickar på länken Skapa utvärdering
+Jag kommer till en ny sida
+Jag sätter rubrik på utvärderingen
+Jag väljer vilken mall av utvärdering det är via en rullista
+Mallen jag vill använda fyller inte in några frågor i mitt formulär utan jag får lägga till varje fråga manuellt
+
+
+
+Jag klickar på länken Skapa utvärdering
+Jag kommer till en ny sida
+Jag sätter rubrik på utvärderingen
+Jag väljer vilken mall av utvärdering det är via en rullista
+Jag klickar på knappen Spara
+Sidan laddas om
+Jag får ett felmeddelande om att rubriken på utvärderingen är upptagen. Rubrikfältet är rödmarkerat.
+
+
+
+Jag klickar på länken Skapa utvärdering
+Jag kommer till en ny sida
+Jag sätter rubrik på utvärderingen
+Jag väljer vilken mall av utvärdering det är via en rullista
+Jag klickar på knappen Spara
+Sidan laddas om
+Jag får ett felmeddelande om att vissa frågor på utvärderingen har tomma fält. De frågor som är fel har en ljus röd bakgrundsfärg och de fält som är felaktiga är rödmarkerade.
