@@ -1,20 +1,58 @@
 Funktionella:  
-	Excel Export 
-	Admin: Skapa enkäter, som har x antal frågor
-	Frågetyper:
-		-Lång text, kort text
-		-checkbox, dropdown, radiobutton
-		-"skala"(kolla google form), "Grid"(kolla google form) 
-	Admin: skapa mottagarlistor med mottagare, mottagare har adresser
-   	Enkla utskick och summeringar. Möjlighet att inte ta med vissa frågor(med svar) i en rapport
-	Flexibla summeringsmöjligheter(men enkelt)
-	Besvara enkät via webbinterface
-	kunna skicka ut och sen dra ut rapporter
-	Resultat på enkäter sparas
-   	
 
+  Admin ska kunna logga in på sidan
+  Admin ska kunna logga ut från sidan
+  Admin ska kunna byta lösenord
+  Admin ska kunna få ett nytt lösenord mailat till sig
+  Admin ska kunna välja att använda en ny mailaddress
+
+  Enkäter  
+    Admin ska använda sig utav systemet via ett webbinterface
+    Admin ska kunna se en lista över enkäter och dess status
+      Statustyper:
+        - Utkast( Inga mottagare eller datum satt )
+        - Ännu ej utskickade( Mottagare och datum satt men datum för utskick är ej passerat )
+        - Pågående( Datumet för utskick har passerat )
+        - Avslutade( Datumet för sista svarsdag har passerat )
+      
+    Admin ska kunna skapa, redigera och ta bort enkäter
+    Admin ska kunna lägga en eller flera frågor i en enkät. Dessa frågor kan vara av olika typer.
+  	  Frågetyper:
+        - Textfält( Lite text )
+        - Textfält( Fritext - tänk textarea )
+        - Checkbox-lista( Flervals )
+        - Dropdown-lista( Enkelval )
+        - Radioknapps-lista( Enkelval ) 
+        - Skala( kolla google forms )
+        - Grid( kolla google form )
+
+    Admin ska kunna skapa mallar för utvärderingar
+    Admin ska kunna välja att en utvärdering baseras på en mall
+    Admin ska kunna välja vilka grupper eller individer som ska få enkäten
+      Grupper och individer hämtas från SCAS
+
+    Admin ska kunna välja att en grupp ska få enkäten med undantag för vissa individer 
+    Admin ska kunna välja när en enkät ska skickas ut
+    Admin ska kunna välja när en enkät inte längre kan besvaras
+    Admin ska kunna skapa rapporter som går att visa upp via ett webbinterface
+      I rapporterna ska grafer kunna ingå
+      Admin ska kunna välja att inte ta med vissa frågor i rapporten
+
+    Admin ska ENKELT kunna utföra beräkningar på resultatet
+
+	Excel Export 
+    Admin ska kunna spara resultatet av en utvärdering till Excel format
+
+  Användare
+    Användare ska kunna ta del av enkäten via ett webbinterface   
+    Användare ska kunna få ett mail med en länk till utvärderingen. Länken är "unik" för användaren och kan bara användas en gång
+      - Detta för att användaren bara ska kunna besvara en utvärdering EN gång
+    Användare ska kunna ta del av enkäten via ett webbinterface
+    Användare ska kunna besvara enkäten
+    Användare ska kunna besvara enkäten anonymt
+    Användare ska kunna ta del av en rapport från en utvärdering
 	
 Icke funktionell:
-	Admin ska ej skriva kod/enkel drift
-	Ett adminkonto
-	Gränssnittet ska vara enkelt att använda
+  Admin ska ej behöva skriva kod
+	Gränssnittet för Admin ska vara enkelt att använda
+  Gränssnittet för användare ska vara enkelt att använda
