@@ -4,7 +4,7 @@ Funktionella:
   Admin ska kunna logga ut från sidan
   Admin ska kunna byta lösenord
   Admin ska kunna få ett nytt lösenord mailat till sig
-  Admin ska kunna välja att använda en ny mailladdress
+  Admin ska kunna välja att använda en ny mailaddress
 
   Enkäter  
     Admin ska använda sig utav systemet via ett webbinterface
