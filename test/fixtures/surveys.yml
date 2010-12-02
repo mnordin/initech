@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  heading: MyString
+  send_date: 2010-12-02 12:06:10
+  deadline: 2010-12-02 12:06:10
+
+two:
+  heading: MyString
+  send_date: 2010-12-02 12:06:10
+  deadline: 2010-12-02 12:06:10
