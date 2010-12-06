@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Content:</b>
+  <%= @question_answering_alternative.content %>
+</p>
+
+<p>
+  <b>Question:</b>
+  <%= @question_answering_alternative.question_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_question_answering_alternative_path(@question_answering_alternative) %> |
+<%= link_to 'Back', question_answering_alternatives_path %>
