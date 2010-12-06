@@ -15,6 +15,14 @@
   <%= @survey.deadline %>
 </p>
 
+<div class="questions">
+<% @survey.questions.each do |question| %>
+	
+	<%= render :partial => "questions/text_question_show", :locals => { :question => question } %>
+
+<% end %>
+</div>
+
 
 <%= link_to 'Edit', edit_survey_path(@survey) %> |
 <%= link_to 'Back', surveys_path %>

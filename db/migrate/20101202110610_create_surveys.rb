@@ -7,6 +7,12 @@ class CreateSurveys < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    # Testdata
+    Survey.create :heading => "Utvardering av hur bra Viktor ar"
+    Survey.create :heading => "Avancerade hackingteknologier 3"
+    Survey.create :heading => "Grundlaggande glasstillverkningskurs"
+    Survey.create :heading => "Utvardering av klassrum 304"
   end
 
   def self.down

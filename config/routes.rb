@@ -1,4 +1,6 @@
 Initech::Application.routes.draw do
+  resources :question_answering_alternatives
+
   resources :questions
 
   resources :surveys
