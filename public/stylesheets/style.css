@@ -131,3 +131,34 @@ ul#mainmenu>li.selected ul#submenu li a:focus {
   font-weight: bold;
   color: #000;
 }
+
+
+article ul.questions li {
+  margin-bottom: 50px;
+  padding: 20px;
+  background-color: #bee4e9;
+}
+
+article ul.questions li h3 {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+article ul.questions li textarea {
+  background-color: #fff;
+  border: 1px solid #000;
+  width: 100%;
+}
+
+article ul.surveys>li {
+  margin-bottom: 20px;
+}
+  
+article ul.surveys li ul li:nth-child( 2n ) {
+  background-color: #eef;
+}
+
+article ul.surveys li ul li:nth-child( 2n + 1 ) {
+  background-color: #f5f5ff;
+}
+
