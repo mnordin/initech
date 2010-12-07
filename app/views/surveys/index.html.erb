@@ -1,27 +1,58 @@
-<h1>Listing surveys</h1>
+<% content_for :title, "Utvarderingar" %>
 
-<table>
-  <tr>
-    <th>Heading</th>
-    <th>Send date</th>
-    <th>Deadline</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @surveys.each do |survey| %>
-  <tr>
-    <td><%= survey.heading %></td>
-    <td><%= survey.send_date %></td>
-    <td><%= survey.deadline %></td>
-    <td><%= link_to 'Show', survey %></td>
-    <td><%= link_to 'Edit', edit_survey_path(survey) %></td>
-    <td><%= link_to 'Destroy', survey, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
+<ul class="surveys">
+  <li>
+    <h2>Utkast</h2>
+    <ul class="drafts">
+      <% @surveys_drafts.each do |survey| %>
+        <li>
+          <%= link_to survey.heading, survey %>
+        </li>
+      <% end %>
+      <% if @surveys_drafts.empty? %>
+        <li>Inga utvarderingar</li>
+      <% end %>
+    </ul>
+  </li>
+  <li>
+    <h2>Pa vag ut</h2>
+    <ul class="scheduled">
+      <% @surveys_scheduled.each do |survey| %>
+        <li>
+          <%= link_to survey.heading, survey %>
+        </li>
+      <% end %>
+      <% if @surveys_scheduled.empty? %>
+        <li>Inga utvarderingar</li>
+      <% end %>
+    </ul>
+  </li>
+  <li>
+    <h2>Aktiva</h2>
+    <ul class="active">
+      <% @surveys_active.each do |survey| %>
+        <li>
+          <%= link_to survey.heading, survey %>
+        </li>
+      <% end %>
+      <% if @surveys_active.empty? %>
+        <li>Inga utvarderingar</li>
+      <% end %>
+    </ul>
+  </li>
+  <li>
+    <h2>Stangda</h2>
+    <ul class="clsed">
+      <% @surveys_closed.each do |survey| %>
+        <li>
+          <%= link_to survey.heading, survey %>
+        </li>
+      <% end %>
+      <% if @surveys_closed.empty? %>
+        <li>Inga utvarderingar</li>
+      <% end %>
+    </ul>
+  </li>
+</ul>
 
 <%= link_to 'New Survey', new_survey_path %>
