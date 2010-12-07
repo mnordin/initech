@@ -1,0 +1,17 @@
+<div class="question scale">
+	<h3><%= question.description %></h3>
+
+	<p><%= question.background %></p>
+	
+	<div>
+		<span>Inte alls</span>
+		<% (1..5).each do |i| %>
+			<label>
+				<%= radio_button("answer", "content", i) %>
+				<%= i %>
+			</label>
+		<% end %>
+		<span>Mycket väl</span>
+	</div>
+	
+</div>
