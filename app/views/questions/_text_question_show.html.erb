@@ -3,4 +3,8 @@
 
 	<p><%= question.background %></p>
 	
+	<div class="answers">
+		<%= render :partial => "question_answering_alternatives/text_answer", :collection => question.question_answering_alternatives, :as => :question_answering_alternative %>
+	</div>
+	
 </article>

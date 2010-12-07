@@ -1,0 +1,10 @@
+<div class="question radiobuttonlist">
+	<h3><%= question.description %></h3>
+
+	<p><%= question.background %></p>
+	
+	<div class="answering_alternatives">
+		<%= render :partial => "question_answering_alternatives/" + question.answer_type + "_answer_form", :collection => question.question_answering_alternatives, :as => :question_answering_alternative %>
+	</div>
+	
+</div>
