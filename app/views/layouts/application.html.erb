@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Initech</title>
+  <title><%=h yield(:title)%></title>
   <%= stylesheet_link_tag :all %>
+  <script type="text/javascript"
+     src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
 <body>
-
-<%= yield %>
-
+  <header>
+    <a href="/">
+      <img src="/images/logo.png" id="logo" alt="Is this good for the company?" />
+    </a>
+    <h1><%=h yield(:title)%></h1>
+  </header>
+  <ul id="mainmenu">
+    <li class="selected">
+      <a href="#">Utv&auml;rderingar</a>
+      <ul id="submenu">
+        <li>
+          <a href="#">Lista</a> 
+        </li> 
+        <li>
+          <a href="#">Skapa ny</a> 
+        </li> 
+      </ul>
+    </li>
+    <li>
+      <a href="#">Inst&auml;llningar</a>
+    </li>
+    <li>
+      <a href="#">Logga ut</a>
+    </li>
+  </ul>
+  <article>
+    <%= yield %>
+  </article>
 </body>
 </html>
