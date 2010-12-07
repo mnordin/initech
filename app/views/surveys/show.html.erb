@@ -1,3 +1,5 @@
+<% content_for :title, "Frågor för @survey.heading" %>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -16,9 +18,11 @@
 </p>
 
 <div class="questions">
-	<%= render :partial => "questions/radiobuttonlist_show", :collection => @survey.questions,  :as => :question %>
+	<h2>Frågor</h2>
+	<% @survey.questions.each do |question| %>
+		<%= render :partial => "questions/" + question.answer_type + "_form", :locals => { :question => question } %>
+	<% end %>
 </div>
-
 
 <%= link_to 'Edit', edit_survey_path(@survey) %> |
 <%= link_to 'Back', surveys_path %>

@@ -1,0 +1,10 @@
+<article>
+	<h3><%= question.description %></h3>
+
+	<p><%= question.background %></p>
+	
+	<div class="answer">
+		<%= text_area(:answer, :content, :cols => 40, :rows => 6) %>
+	</div>
+	
+</article>
