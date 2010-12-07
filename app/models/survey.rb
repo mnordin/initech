@@ -1,6 +1,7 @@
 class Survey < ActiveRecord::Base
   has_many :questions
-  accepts_nested_attributes_for :questions
+  validates_presence_of :heading
+  accepts_nested_attributes_for :questions, :allow_destroy => true
   
   
   def getQuestionTypes
