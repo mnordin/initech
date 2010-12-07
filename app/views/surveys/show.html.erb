@@ -16,11 +16,7 @@
 </p>
 
 <div class="questions">
-<% @survey.questions.each do |question| %>
-	
-	<%= render :partial => "questions/text_question_show", :locals => { :question => question } %>
-
-<% end %>
+	<%= render :partial => "questions/text_question_show", :collection => @survey.questions, :as => :question %>
 </div>
 
 
