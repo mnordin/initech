@@ -1,4 +1,5 @@
-<%= form_for(@survey) do |f| %>
+<%= form_for @survey, :html => { :class => "survey" } do |f| %>
+
   <% if @survey.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@survey.errors.count, "error") %> prohibited this survey from being saved:</h2>
@@ -24,7 +25,7 @@
     <%= f.datetime_select :deadline %>
   </div>
 	
-	<h2>Frågor</h2>
+	<h2>Fr&aring;gor</h2>
 
 	<% f.fields_for :questions do |question_form| %>
 		<%= render :partial => "questions/question_form", :locals => { :question_form => question_form } %>
