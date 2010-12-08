@@ -30,9 +30,17 @@
 		<%= render :partial => "questions/question_form", :locals => { :question_form => question_form } %>
 	<% end %>
 	
-	<p>Klicka på lägg till för att lägga till en fråga!</p>
+	<p id="add_question">Lägg till fråga</p>
 	
-	<p id="addQuestion">Lägg till fråga</p>
+	<script type="text/javascript" charset="utf-8">
+		$("#add_question").click(function(){
+			$this = $(this);
+			var addButton = $("#addQuestion");
+			$("<div />").addClass("question").load("/questions/new/ #fields", function() {
+				$this.before($(this));
+			});
+		})
+	</script>
 
   <div class="actions">
     <%= f.submit %>

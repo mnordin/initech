@@ -19,8 +19,8 @@ body {
   padding: 0;
   margin: 0;
   width: 800px;
-  height: 100%;
   margin: 0 auto;
+	padding-bottom: 30px;
   -moz-box-shadow: 2px -5px 10px #666;
 }
 
@@ -162,3 +162,17 @@ article ul.surveys li ul li:nth-child( 2n + 1 ) {
   background-color: #f5f5ff;
 }
 
+#add_question {
+	display: block;
+	width: 100%;
+	background: #eee;
+	cursor: pointer;
+	padding: 10px 0;
+	font-size: 16px;
+	font-weight: bold;
+	text-indent: 20px;
+}
+
+.question {
+	background-color: #bee4e9;
+}

@@ -29,8 +29,10 @@ class SurveysController < ApplicationController
   # GET /surveys/new.xml
   def new
     @survey = Survey.new
-    @question = Question.new
-    @question_answering_alternatives = QuestionAnsweringAlternative.new
+    @survey.status = "draft"
+    3.times { 
+     @survey.questions.build
+    }
 
     respond_to do |format|
       format.html # new.html.erb
