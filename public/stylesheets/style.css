@@ -1,0 +1,164 @@
+h1,h2,h3,h4,h5,h6,ul,ol,li,p {
+  margin: 0;
+  padding: 0;
+}
+ul,ol,li {
+  list-style: none;
+}
+a:link, a:visited, a:hover, a:active, a:focus {
+  background-color: transparent;
+  color: #00f;
+}
+
+html {
+  background-image: url('/images/bg-fabric.png');
+  height: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  width: 800px;
+  height: 100%;
+  margin: 0 auto;
+  -moz-box-shadow: 2px -5px 10px #666;
+}
+
+header {
+  background-color: #fff;
+  background-image: url('/images/bg-header.png');
+  background-position: bottom;
+  padding: 40px;
+  height: 60px;
+  display: block;
+}
+
+header img#logo {
+  border: 0;
+  float: left;
+  width: 92px;
+  height: 60px;
+}
+
+header a {
+  display: block;
+  float: left;
+  width: 92px;
+  height: 60px;
+  margin-right: 128px;
+}
+
+header h1 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 42px;
+}
+
+article {
+  background-color: #fff;
+  padding: 0 40px;
+  height: 100%;
+  display: block;
+}
+
+ul#mainmenu {
+  padding: 0 40px;
+  height: 40px;
+  margin-bottom: 40px;
+}
+
+ul#mainmenu>li {
+  float: right;
+  font-size: 18px;
+  padding: 0 40px;
+  height: 40px; 
+}
+
+ul#mainmenu>li.selected {
+  float: left;
+  padding: 0;
+  background-color: #000;
+  position: absolute;
+  overflow: hidden;
+}
+
+ul#mainmenu>li.selected:hover {
+  overflow: visible;
+}
+
+ul#mainmenu>li a:link,
+ul#mainmenu>li a:visited,
+ul#mainmenu>li a:hover,
+ul#mainmenu>li a:active,
+ul#mainmenu>li a:focus {
+  color: #000;
+  text-decoration: none;
+  display: block;
+  margin-top: 5px;
+  float: left;
+  font-size: 20px;
+}
+
+ul#mainmenu>li.selected a:link,
+ul#mainmenu>li.selected a:visited,
+ul#mainmenu>li.selected a:hover,
+ul#mainmenu>li.selected a:active,
+ul#mainmenu>li.selected a:focus {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
+  padding: 0 10px;
+}
+
+ul#mainmenu>li.selected ul#submenu {
+  -moz-box-shadow: 0px 5px 5px #666;
+}
+
+ul#mainmenu>li.selected ul#submenu li {
+  clear: both;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+ul#mainmenu>li.selected ul#submenu li a:link,
+ul#mainmenu>li.selected ul#submenu li a:visited,
+ul#mainmenu>li.selected ul#submenu li a:hover,
+ul#mainmenu>li.selected ul#submenu li a:active,
+ul#mainmenu>li.selected ul#submenu li a:focus {
+  font-weight: bold;
+  color: #000;
+}
+
+
+article ul.questions li {
+  margin-bottom: 50px;
+  padding: 20px;
+  background-color: #bee4e9;
+}
+
+article ul.questions li h3 {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+article ul.questions li textarea {
+  background-color: #fff;
+  border: 1px solid #000;
+  width: 100%;
+}
+
+article ul.surveys>li {
+  margin-bottom: 20px;
+}
+  
+article ul.surveys li ul li:nth-child( 2n ) {
+  background-color: #eef;
+}
+
+article ul.surveys li ul li:nth-child( 2n + 1 ) {
+  background-color: #f5f5ff;
+}
+

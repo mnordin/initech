@@ -1,0 +1,10 @@
+<div class="question select">
+	<h3><%= question.description %></h3>
+
+	<p><%= question.background %></p>
+	
+	<div class="answer">
+		<%= select("answer", "content", question.question_answering_alternatives.map {|a| [a.content, a.id]}) %>
+	</div>
+	
+</div>

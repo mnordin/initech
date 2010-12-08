@@ -4,6 +4,10 @@ class SurveysController < ApplicationController
   # GET /surveys.xml
   def index
     @surveys = Survey.all
+    @surveys_drafts = Survey.where(:status => "draft").all
+    @surveys_scheduled = Survey.where(:status => "scheduled").all
+    @surveys_active = Survey.where(:status => "active").all
+    @surveys_closed = Survey.where(:status => "closed").all
 
     respond_to do |format|
       format.html # index.html.erb

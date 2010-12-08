@@ -6,6 +6,8 @@ Initech::Application.routes.draw do
    
   root :to => 'surveys#index'
 
+  root :to => "surveys#index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

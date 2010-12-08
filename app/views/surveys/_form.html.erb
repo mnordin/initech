@@ -23,6 +23,17 @@
     <%= f.label :deadline %><br />
     <%= f.datetime_select :deadline %>
   </div>
+	
+	<h2>Frågor</h2>
+
+	<% f.fields_for :questions do |question_form| %>
+		<%= render :partial => "questions/question_form", :locals => { :question_form => question_form } %>
+	<% end %>
+	
+	<p>Klicka på lägg till för att lägga till en fråga!</p>
+	
+	<p id="addQuestion">Lägg till fråga</p>
+
   <div class="actions">
     <%= f.submit %>
   </div>
