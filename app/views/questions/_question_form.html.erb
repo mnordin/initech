@@ -1,27 +1,30 @@
-<h3>Fråga</h3>
+<div class="question">
+	
+	<div class="field">
+	  <%= question_form.label :description %><br />
+	  <%= question_form.text_field :description %>
+	</div>
 
-<div class="field">
-  <%= question_form.label :description %><br />
-  <%= question_form.text_field :description %>
+	<div class="field">
+	  <%= question_form.label :background %><br />
+	  <%= question_form.text_area :background, :rows => 8, :cols => 60 %>
+	</div>
+
+	<div class="field">
+	  <%= question_form.label :answer_type %><br />
+	  <%= question_form.select :answer_type, @survey.getQuestionTypes %>
+	</div>
+
+	<%= question_form.fields_for :question_answering_alternatives do |answer_alts_form| %>
+		<%= render :partial => "question_answering_alternatives/answering_alts_form", :locals => { :answer_alts_form => answer_alts_form } %>
+	<% end %>
+
+
+	<% unless question_form.object.new_record? %>
+		<div class="remove_question">
+		  <%= question_form.check_box :_destroy %>
+			<%= question_form.label :_destroy, "Ta bort fråga" %>
+		</div>
+	<% end %>
+	
 </div>
-
-<div class="field">
-  <%= question_form.label :background %><br />
-  <%= question_form.text_area :background, :rows => 8, :cols => 60 %>
-</div>
-
-<div class="field">
-  <%= question_form.label :answer_type %><br />
-  <%= question_form.select :answer_type, @survey.getQuestionTypes %>
-</div>
-
-<%= question_form.fields_for :question_answering_alternatives do |answer_alts_form| %>
-	<%= render :partial => "question_answering_alternatives/answering_alts_form", :locals => { :answer_alts_form => answer_alts_form } %>
-<% end %>
-
-
-<% unless question_form.object.new_record? %>
-  <!-- For existing records we add a checkbox to be able to delete records. -->
-  <%= question_form.label :_delete, "Remove:" %>
-  <%= question_form.check_box :_delete %>
-<% end %>
