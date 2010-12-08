@@ -1,4 +1,5 @@
 class SurveysController < ApplicationController
+  before_filter :authenticate_admin!,  :except => [:show, :index]
   # GET /surveys
   # GET /surveys.xml
   def index
