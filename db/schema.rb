@@ -49,8 +49,6 @@ ActiveRecord::Schema.define(:version => 20101207174329) do
     t.string   "heading"
     t.datetime "send_date"
     t.datetime "deadline"
-    t.string   "status"
-    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

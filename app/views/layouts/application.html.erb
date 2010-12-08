@@ -19,12 +19,9 @@
 				<%= link_to "sign out", destroy_admin_session_path%>
 			 <% else %>
 				<%= link_to "sign up", new_admin_registration_path %> or <%= link_to "sign in", new_admin_session_path %>
-			 <% end %>
-		 
+			 <% end %> 
 	    </div>
 	</div>
-
-<%= yield %>
   <header>
     <a href="/">
       <img src="/images/logo.png" id="logo" alt="Is this good for the company?" />
