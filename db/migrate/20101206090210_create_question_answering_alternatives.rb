@@ -9,7 +9,7 @@ class CreateQuestionAnsweringAlternatives < ActiveRecord::Migration
   end
   
   # Testdata
-#  QuestionAnsweringAlternative.create :question_id => 1
+   Question_Answering_Alternative.create :question_id => 1, :content => "shubru"
 #  QuestionAnsweringAlternative.create :content => "10 Ton", :question_id => 1
 #  QuestionAnsweringAlternative.create :content => "En siffra tagen ur luften", :question_id => 1
 
