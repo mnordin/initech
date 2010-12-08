@@ -4,7 +4,10 @@ class Survey < ActiveRecord::Base
 
   validates :status, :presence => true
   validates :heading, :presence => true
-
+  
+  #validates_associated :questions
+  
+  
   def getQuestionTypes
     { 
       "textfield" => "textfield",
@@ -15,4 +18,5 @@ class Survey < ActiveRecord::Base
       "scale" => "scale"
     }
   end
+  
 end

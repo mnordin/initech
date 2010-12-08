@@ -1,6 +1,12 @@
 <div class="answering_alternatives">
 	<div class="field">
-	  <%= answer_alts_form.label :content %><br />
+	  <%= answer_alts_form.label :content, "Svarsalternativ" %><br />
 	  <%= answer_alts_form.text_field :content %>
 	</div>
+	<% unless answer_alts_form.object.new_record? %>
+		<div class="remove_question">
+		  <%= answer_alts_form.check_box :_destroy %>
+			<%= answer_alts_form.label :_destroy, "Ta bort svarsalternativ" %>
+		</div>
+	<% end %>
 </div>

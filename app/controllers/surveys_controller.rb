@@ -18,7 +18,7 @@ class SurveysController < ApplicationController
   # GET /surveys/1.xml
   def show
     @survey = Survey.find(params[:id])
-
+    
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @survey }
@@ -29,6 +29,10 @@ class SurveysController < ApplicationController
   # GET /surveys/new.xml
   def new
     @survey = Survey.new
+    @survey.status = "draft"
+    3.times { 
+     @survey.questions.build
+    }
 
     respond_to do |format|
       format.html # new.html.erb
