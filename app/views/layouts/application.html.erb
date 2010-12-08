@@ -20,18 +20,18 @@
       <a href="#">Utv&auml;rderingar</a>
       <ul id="submenu">
         <li>
-          <a href="#">Lista</a> 
+          <%= link_to 'Lista', @survey %> 
         </li> 
         <li>
-          <a href="#">Skapa ny</a> 
+          <%= link_to 'Skapa ny', new_survey_path %> 
         </li> 
       </ul>
     </li>
     <li>
-      <a href="#">Inst&auml;llningar</a>
+      <a href="#">Logga ut</a>
     </li>
     <li>
-      <a href="#">Logga ut</a>
+      <a href="#">Inst&auml;llningar</a>
     </li>
   </ul>
   <article>

@@ -22,6 +22,7 @@ body {
   height: 100%;
   margin: 0 auto;
   -moz-box-shadow: 2px -5px 10px #666;
+  -webkit-box-shadow: 2px -5px 10px #666;
 }
 
 header {
@@ -115,6 +116,7 @@ ul#mainmenu>li.selected a:focus {
 
 ul#mainmenu>li.selected ul#submenu {
   -moz-box-shadow: 0px 5px 5px #666;
+  -webkit-box-shadow: 0px 5px 5px #666;
 }
 
 ul#mainmenu>li.selected ul#submenu li {
@@ -137,6 +139,7 @@ article ul.questions li {
   margin-bottom: 50px;
   padding: 20px;
   background-color: #bee4e9;
+  overflow: hidden;
 }
 
 article ul.questions li h3 {
@@ -147,7 +150,8 @@ article ul.questions li h3 {
 article ul.questions li textarea {
   background-color: #fff;
   border: 1px solid #000;
-  width: 100%;
+  width: 670px;
+  padding: 5px;
 }
 
 article ul.surveys>li {
@@ -162,3 +166,29 @@ article ul.surveys li ul li:nth-child( 2n + 1 ) {
   background-color: #f5f5ff;
 }
 
+article ul.questions div.radiobuttonlist div.answering_alternative,
+article ul.questions div.checkboxlist div.answering_alternative {
+  padding: 16px;
+  width: 308px;
+  margin-bottom: 15px;
+  float: left;
+  overflow: hidden;
+}
+
+article ul.questions div.radiobuttonlist div.answering_alternative.selected,
+article ul.questions div.checkboxlist div.answering_alternative.selected {
+  padding: 15px;
+  background-color: #d5f2f6;
+  border: 1px solid #859fa3;
+}
+
+
+article ul.questions div.radiobuttonlist div.answering_alternative input,
+article ul.questions div.checkboxlist div.answering_alternative input {
+  margin-right: 15px;
+}
+
+article ul.questions div.radiobuttonlist div.answering_alternative label,
+article ul.questions div.checkboxlist div.answering_alternative label {
+  font-weight: bold;
+}
