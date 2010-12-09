@@ -1,9 +1,10 @@
-Initech::Application.routes.draw do
-  resources :question_answering_alternatives
+Initech::Application.routes.draw do 
+  devise_for :users
 
-  resources :questions
-
-  resources :surveys
+  devise_for :admins
+  resources :surveys, :questions, :question_answering_alternatives
+   
+  root :to => 'surveys#index'
 
   root :to => "surveys#index"
 
@@ -56,7 +57,7 @@ Initech::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => "welcome#index"
+  root :to => "home#index"
 
   # See how all your routes lay out with "rake routes"
 

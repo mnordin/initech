@@ -1,4 +1,4 @@
-<% content_for :title, "Utvarderingar" %>
+<% content_for :title, "Lista over utvarderingar" %>
 
 <ul class="surveys">
   <li>
@@ -15,11 +15,12 @@
     </ul>
   </li>
   <li>
-    <h2>Pa vag ut</h2>
+    <h2>Utgående</h2>
     <ul class="scheduled">
       <% @surveys_scheduled.each do |survey| %>
         <li>
           <%= link_to survey.heading, survey %>
+          Skickas: <%= survey.send_date %> 
         </li>
       <% end %>
       <% if @surveys_scheduled.empty? %>
@@ -28,11 +29,12 @@
     </ul>
   </li>
   <li>
-    <h2>Aktiva</h2>
+    <h2>Pågående</h2>
     <ul class="active">
       <% @surveys_active.each do |survey| %>
         <li>
           <%= link_to survey.heading, survey %>
+          Avslutas: <%= survey.deadline %> 
         </li>
       <% end %>
       <% if @surveys_active.empty? %>
@@ -41,7 +43,7 @@
     </ul>
   </li>
   <li>
-    <h2>Stangda</h2>
+    <h2>Avslutade</h2>
     <ul class="clsed">
       <% @surveys_closed.each do |survey| %>
         <li>
@@ -54,5 +56,3 @@
     </ul>
   </li>
 </ul>
-
-<%= link_to 'New Survey', new_survey_path %>

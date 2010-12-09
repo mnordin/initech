@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Initech</title>
+  <p class='notice'><%= notice %></p>
+  <p class='alert'><%= alert %></p> 
   <title><%=h yield(:title)%></title>
   <%= stylesheet_link_tag :all %>
   <script type="text/javascript"
@@ -9,6 +12,16 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+	<div id="container"> 
+		<div id="admin_nav">
+			<% if admin_signed_in? %> 
+				Signed in as <%= current_admin.email %>. Not you?
+				<%= link_to "sign out", destroy_admin_session_path%>
+			 <% else %>
+				<%= link_to "sign up", new_admin_registration_path %> or <%= link_to "sign in", new_admin_session_path %>
+			 <% end %> 
+	    </div>
+	</div>
   <header>
     <a href="/">
       <img src="/images/logo.png" id="logo" alt="Is this good for the company?" />
@@ -19,19 +32,19 @@
     <li class="selected">
       <a href="#">Utv&auml;rderingar</a>
       <ul id="submenu">
-        <li>
-          <a href="#">Lista</a> 
+        <li class="list_surveys">
+          <%= link_to 'Lista', @survey %> 
         </li> 
-        <li>
-          <a href="#">Skapa ny</a> 
+        <li class="new_survey">
+          <%= link_to 'Skapa ny', new_survey_path %> 
         </li> 
       </ul>
     </li>
     <li>
-      <a href="#">Inst&auml;llningar</a>
+      <a href="#">Logga ut</a>
     </li>
     <li>
-      <a href="#">Logga ut</a>
+      <a href="#">Inst&auml;llningar</a>
     </li>
   </ul>
   <article>
