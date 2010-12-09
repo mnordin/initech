@@ -4,7 +4,7 @@ class Question < ActiveRecord::Base
   accepts_nested_attributes_for :question_answering_alternatives, :allow_destroy => true
  
   validates :description, :presence => true 
-  validates :survey_id, :presence => true
+  #validates :survey_id, :presence => true
   validates :answer_type, :presence => true
   
   def getQuestionTypes
