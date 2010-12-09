@@ -258,3 +258,41 @@ form.survey div.actions input#survey_submit {
   margin: 10px 0;
 }
 
+
+div.authbox {
+  width: 50%;
+  margin: 2em auto;
+}
+
+div.authbox input {
+  width: 100%;
+  font-size: 20px;
+}
+
+p.alert {
+  display: block;
+  width: 500px;
+  background-color: #ffc;
+  background-image: url('/images/icons/comment_warning_48.png');
+  background-repeat: no-repeat;
+  height: 34px;
+  padding-top: 14px;
+  padding-left: 60px;
+  font-size: 18px;
+  margin: 1em auto;
+  border: 1px solid #eee;
+}
+
+p.notice {
+  display: block;
+  width: 500px;
+  background-color: #efe;
+  background-image: url('/images/icons/comment_48.png');
+  background-repeat: no-repeat;
+  height: 34px;
+  padding-top: 14px;
+  padding-left: 60px;
+  font-size: 18px;
+  margin: 1em auto;
+  border: 1px solid #eee;
+}
