@@ -14,7 +14,7 @@
 <body>
 	<div id="container"> 
 		<div id="admin_nav">
-			<% if admin_signed_in? %>
+			<% if admin_signed_in? %> 
 				Signed in as <%= current_admin.email %>. Not you?
 				<%= link_to "sign out", destroy_admin_session_path%>
 			 <% else %>

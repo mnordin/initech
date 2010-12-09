@@ -41,6 +41,8 @@ ActiveRecord::Schema.define(:version => 20101207174329) do
   create_table "questions", :force => true do |t|
     t.string   "description"
     t.text     "background"
+    t.integer  "survey_id"
+    t.string   "answer_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -49,6 +51,8 @@ ActiveRecord::Schema.define(:version => 20101207174329) do
     t.string   "heading"
     t.datetime "send_date"
     t.datetime "deadline"
+    t.string   "status"
+    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
