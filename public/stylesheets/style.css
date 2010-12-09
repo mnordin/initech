@@ -19,9 +19,10 @@ body {
   padding: 0;
   margin: 0;
   width: 800px;
-  height: 100%;
   margin: 0 auto;
+	padding-bottom: 30px;
   -moz-box-shadow: 2px -5px 10px #666;
+  -webkit-box-shadow: 2px -5px 10px #666;
 }
 
 header {
@@ -106,21 +107,36 @@ ul#mainmenu>li.selected a:active,
 ul#mainmenu>li.selected a:focus {
   color: #fff;
   text-decoration: none;
-  font-size: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  font-size: 18px;
   display: block;
   padding: 0 10px;
+  height: 34px;
 }
 
 ul#mainmenu>li.selected ul#submenu {
   -moz-box-shadow: 0px 5px 5px #666;
+  -webkit-box-shadow: 0px 5px 5px #666;
 }
 
 ul#mainmenu>li.selected ul#submenu li {
   clear: both;
   overflow: hidden;
   background-color: #fff;
+  height: 48px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+}
+
+ul#mainmenu>li.selected ul#submenu li:hover {
+  background-color: #eee;
+}
+
+ul#mainmenu>li.selected ul#submenu li.new_survey {
+  background-image: url('/images/icons/paperandpencil_48.png');
+}
+
+ul#mainmenu>li.selected ul#submenu li.list_surveys {
+  background-image: url('/images/icons/navigate_48.png');
 }
 
 ul#mainmenu>li.selected ul#submenu li a:link,
@@ -130,6 +146,9 @@ ul#mainmenu>li.selected ul#submenu li a:active,
 ul#mainmenu>li.selected ul#submenu li a:focus {
   font-weight: bold;
   color: #000;
+  width: 100px;
+  padding-left: 48px;
+  height: 48px;
 }
 
 
@@ -137,6 +156,7 @@ article ul.questions li {
   margin-bottom: 50px;
   padding: 20px;
   background-color: #bee4e9;
+  overflow: hidden;
 }
 
 article ul.questions li h3 {
@@ -147,7 +167,8 @@ article ul.questions li h3 {
 article ul.questions li textarea {
   background-color: #fff;
   border: 1px solid #000;
-  width: 100%;
+  width: 670px;
+  padding: 5px;
 }
 
 article ul.surveys>li {
@@ -160,5 +181,80 @@ article ul.surveys li ul li:nth-child( 2n ) {
 
 article ul.surveys li ul li:nth-child( 2n + 1 ) {
   background-color: #f5f5ff;
+}
+
+article ul.questions div.radiobuttonlist div.answering_alternative,
+article ul.questions div.checkboxlist div.answering_alternative {
+  padding: 16px;
+  width: 308px;
+  margin-bottom: 15px;
+  float: left;
+  overflow: hidden;
+}
+
+article ul.questions div.radiobuttonlist div.answering_alternative.selected,
+article ul.questions div.checkboxlist div.answering_alternative.selected {
+  padding: 15px;
+  background-color: #d5f2f6;
+  border: 1px solid #859fa3;
+}
+
+
+article ul.questions div.radiobuttonlist div.answering_alternative input,
+article ul.questions div.checkboxlist div.answering_alternative input {
+  margin-right: 15px;
+}
+
+article ul.questions div.radiobuttonlist div.answering_alternative label,
+article ul.questions div.checkboxlist div.answering_alternative label {
+  font-weight: bold;
+}
+
+form.survey label {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+form.survey input#survey_heading {
+  width: 100%;
+  font-size: 18px;
+  padding: 5px 0;
+}
+
+form.survey .question {
+	background-color: #bee4e9;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+form.survey .question input {
+  width: 100%;
+  border: 1px solid #000;
+  font-size: 16px;
+}
+
+form.survey .question label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+form.survey #add_question {
+  background-image: url('/images/icons/add_48.png');
+  background-repeat: no-repeat;
+  display: block;
+	cursor: pointer;
+	font-size: 32px;
+  line-height: 45px;
+  height: 48px;
+	font-weight: bold;
+	text-indent: 60px;
+  margin: 10px 0;
+}
+
+form.survey div.actions input#survey_submit {
+  text-align: left;
+	font-size: 24px;
+	font-weight: bold;
+  margin: 10px 0;
 }
 

@@ -1,4 +1,5 @@
-<%= form_for(@survey) do |f| %>
+<%= form_for @survey, :html => { :class => "survey" } do |f| %>
+
   <% if @survey.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@survey.errors.count, "error") %> prohibited this survey from being saved:</h2>
@@ -24,15 +25,23 @@
     <%= f.datetime_select :deadline %>
   </div>
 	
-	<h2>Frågor</h2>
+	<h2>Fr&aring;gor</h2>
 
 	<% f.fields_for :questions do |question_form| %>
 		<%= render :partial => "questions/question_form", :locals => { :question_form => question_form } %>
 	<% end %>
 	
-	<p>Klicka på lägg till för att lägga till en fråga!</p>
+	<p id="add_question">Lägg till fråga</p>
 	
-	<p id="addQuestion">Lägg till fråga</p>
+	<script type="text/javascript" charset="utf-8">
+		$("#add_question").click(function(){
+			$this = $(this);
+			var addButton = $("#addQuestion");
+			$("<div />").addClass("question").load("/questions/new/ #fields", function() {
+				$this.before($(this));
+			});
+		})
+	</script>
 
   <div class="actions">
     <%= f.submit %>

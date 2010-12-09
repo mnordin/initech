@@ -7,4 +7,15 @@ class Question < ActiveRecord::Base
   validates :survey_id, :presence => true
   validates :answer_type, :presence => true
   
+  def getQuestionTypes
+    { 
+      "textfield" => "textfield",
+      "select" => "select",
+      "textarea" => "textarea",
+      "radiobuttonlist" => "radiobuttonlist",
+      "checkboxlist" => "checkboxlist",
+      "scale" => "scale"
+    }
+  end
+  
 end

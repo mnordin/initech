@@ -32,19 +32,19 @@
     <li class="selected">
       <a href="#">Utv&auml;rderingar</a>
       <ul id="submenu">
-        <li>
-          <a href="#">Lista</a> 
+        <li class="list_surveys">
+          <%= link_to 'Lista', @survey %> 
         </li> 
-        <li>
-          <a href="#">Skapa ny</a> 
+        <li class="new_survey">
+          <%= link_to 'Skapa ny', new_survey_path %> 
         </li> 
       </ul>
     </li>
     <li>
-      <a href="#">Inst&auml;llningar</a>
+      <a href="#">Logga ut</a>
     </li>
     <li>
-      <a href="#">Logga ut</a>
+      <a href="#">Inst&auml;llningar</a>
     </li>
   </ul>
   <article>
