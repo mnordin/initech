@@ -18,6 +18,9 @@ class DeviseCreateAdmins < ActiveRecord::Migration
     add_index :admins, :reset_password_token, :unique => true
     # add_index :admins, :confirmation_token,   :unique => true
     # add_index :admins, :unlock_token,         :unique => true
+
+    Admin.create :email => "admin@domain.com", :password => "test", :password_confirmation => "test" 
+
   end
 
   def self.down
