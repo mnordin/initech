@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Report:</b>
+  <%= @survey_question_result.report_id %>
+</p>
+
+<p>
+  <b>Question:</b>
+  <%= @survey_question_result.question_id %>
+</p>
+
+<p>
+  <b>Graph:</b>
+  <%= @survey_question_result.graph %>
+</p>
+
+<p>
+  <b>Raw data:</b>
+  <%= @survey_question_result.raw_data %>
+</p>
+
+<p>
+  <b>Type of graph:</b>
+  <%= @survey_question_result.type_of_graph %>
+</p>
+
+
+<%= link_to 'Edit', edit_survey_question_result_path(@survey_question_result) %> |
+<%= link_to 'Back', survey_question_results_path %>
