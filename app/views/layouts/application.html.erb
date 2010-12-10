@@ -20,21 +20,21 @@
   <% if admin_signed_in? %>
     <ul id="mainmenu">
       <li class="selected">
-        <a href="#">Utv&auml;rderingar</a>
+        <%= link_to 'Utvärderingar', :controller => "surveys", :action => "index" %> 
         <ul id="submenu">
           <li class="list_surveys">
-            <%= link_to 'Lista', @survey %> 
+            <%= link_to 'Lista alla', :controller => "surveys", :action => "index" %> 
           </li> 
           <li class="new_survey">
-            <%= link_to 'Skapa ny', new_survey_path %> 
+            <%= link_to 'Skapa ny', :controller => "surveys", :action => "new" %> 
           </li> 
         </ul>
       </li>
       <li>
-        <%= link_to "Logga ut", destroy_admin_session_path%>
+        <%= link_to "Logga ut", destroy_admin_session_path %>
       </li>
       <li>
-        <a href="#">Inst&auml;llningar</a>
+        <a href="/admins/password/edit">Inst&auml;llningar</a>
       </li>
     </ul>
   <% end %>

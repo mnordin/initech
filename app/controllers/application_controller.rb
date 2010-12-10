@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  before_filter :authenticate_admin!
+  before_filter :authenticate_admin!, :except => [:show]
   protect_from_forgery
   
   def sign_out_and_redirect(resource_or_scope)
