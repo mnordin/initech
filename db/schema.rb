@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(:version => 20101207110612) do
     t.datetime "deadline"
     t.string   "status"
     t.string   "description"
+    t.string   "random_identifier"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
