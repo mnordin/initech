@@ -1,12 +1,8 @@
 Initech::Application.routes.draw do 
-  devise_for :users
-
   devise_for :admins
   resources :surveys, :questions, :question_answering_alternatives
    
   root :to => 'surveys#index'
-
-  root :to => "surveys#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
