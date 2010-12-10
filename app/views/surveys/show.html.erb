@@ -17,6 +17,17 @@
   <%= @survey.deadline %>
 </p>
 
+<p>
+  <b>Status:</b>
+  <%= @survey.status %>
+</p>
+
+<p>
+  <b>Länk(funkar bara utloggad och om status är active):</b>
+  http://localhost:3000/surveys/<%= @survey.random_identifier %>
+</p>
+
+
 <form method="post">
   <ul class="questions">
     <% @survey.questions.each do |question| %>
