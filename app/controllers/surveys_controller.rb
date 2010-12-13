@@ -19,6 +19,10 @@ class SurveysController < ApplicationController
   def show
     if admin_signed_in?
       @survey = Survey.find(params[:id])
+      if @survey.nil? 
+        @survey = Survey.find_by_random_identifier( params[:id] )
+        raise ActiveRecord::RecordNotFound if @survey.nil?
+      end
     else 
       @survey = Survey.where(:status => "active").find_by_random_identifier( params[:id] )
       raise ActiveRecord::RecordNotFound if @survey.nil?
