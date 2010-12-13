@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101207110612) do
+ActiveRecord::Schema.define(:version => 20101210111254) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                               :default => "", :null => false
@@ -43,6 +43,22 @@ ActiveRecord::Schema.define(:version => 20101207110612) do
     t.text     "background"
     t.integer  "survey_id"
     t.string   "answer_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "reports", :force => true do |t|
+    t.integer  "survey_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "survey_question_results", :force => true do |t|
+    t.integer  "report_id"
+    t.integer  "question_id"
+    t.boolean  "graph"
+    t.boolean  "raw_data"
+    t.text     "type_of_graph"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,4 +1,8 @@
 Initech::Application.routes.draw do 
+  resources :reports
+
+  resources :survey_question_results
+  
   devise_for :admins
   resources :surveys, :questions, :question_answering_alternatives
    

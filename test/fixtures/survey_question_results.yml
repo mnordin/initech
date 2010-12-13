@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  report_id: 1
+  question_id: 1
+  graph: false
+  raw_data: false
+  type_of_graph: MyText
+
+two:
+  report_id: 1
+  question_id: 1
+  graph: false
+  raw_data: false
+  type_of_graph: MyText

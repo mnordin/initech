@@ -5,8 +5,9 @@
   <title><%=h yield(:title)%></title>
   <%= stylesheet_link_tag :all %>
   <script type="text/javascript"
-    src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-  <%= javascript_include_tag :defaults %>
+  src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+  <%= javascript_include_tag :defaults %> 
+  <%= javascript_include_tag "javascripts/highcharts" %>
   <%= csrf_meta_tag %>
 </head>
 <body>

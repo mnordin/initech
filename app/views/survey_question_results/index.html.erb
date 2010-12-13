@@ -1,0 +1,31 @@
+<h1>Listing survey_question_results</h1>
+
+<table>
+  <tr>
+    <th>Report</th>
+    <th>Question</th>
+    <th>Graph</th>
+    <th>Raw data</th>
+    <th>Type of graph</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @survey_question_results.each do |survey_question_result| %>
+  <tr>
+    <td><%= survey_question_result.report_id %></td>
+    <td><%= survey_question_result.question_id %></td>
+    <td><%= survey_question_result.graph %></td>
+    <td><%= survey_question_result.raw_data %></td>
+    <td><%= survey_question_result.type_of_graph %></td>
+    <td><%= link_to 'Show', survey_question_result %></td>
+    <td><%= link_to 'Edit', edit_survey_question_result_path(survey_question_result) %></td>
+    <td><%= link_to 'Destroy', survey_question_result, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Survey question result', new_survey_question_result_path %>
