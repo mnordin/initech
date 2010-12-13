@@ -1,3 +1,7 @@
-Jag väljer frågan jag vill ta bort
-Jag klickar på knappen "ta bort" för den frågan
-Jag ser en modalruta där jag bekräftar att jag vill ta bort frågan
+Jag är inne på sidan för redigering av en utvärdering
+
+Jag ser frågan jag vill ta bort
+Jag klickar på kryssrutan vid texten "Ta bort" för den aktuella frågan
+Jag klickar på knappen "Update survey" längst ner på sidan
+Jag kommer till en ny sida
+Jag får ett meddelande som bekräftar att jag förändrat utvärderingen
