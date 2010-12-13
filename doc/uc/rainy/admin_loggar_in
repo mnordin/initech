@@ -1,8 +1,0 @@
-Admin loggar in
-
-Jag kommer till utvärderingssidan
-Jag fyller i användarnamn i formulärfältet Användarnamn
-Jag fyller i lösenord i formulärfältet Lösenord
-Jag klickar på knappen "logga in"
-Sidan laddas om
-Jag kommer tillbaka till samma sida med en varningstext om att jag fyllt i både fel användarnamn och lösenord och användar- och lösenordsfältet är rödmarkerade.
