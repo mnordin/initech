@@ -1,6 +1,9 @@
+Admin loggar in
+
+
 Jag är på förstasidan
 Jag fyller i användarnamn i formulärfältet "Användarnamn"
 Jag fyller i lösenord i formulärfältet "Lösenord"
 Jag klickar på knappen "Logga in"
 Jag kommer till en ny sida
-Jag får ett meddelande om att inloggningen lyckades
+Jag ser ett meddelande om att inloggningen lyckades
